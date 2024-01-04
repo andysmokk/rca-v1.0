@@ -10,7 +10,7 @@ const handleScroll = () => {}
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
-        <h1 className="hero__title">Find Your Ideal Car Rental – Compare Rates and Save</h1>
+        <h1 className="hero__title">Find Your Ideal Car Rental - Compare Rates and Save</h1>
         <p className="hero__subtitle">Enhance Your Car Rental Journey with Our Seamless and Effortless Booking System</p>
         <CustomButton
           title='Explore cars'
