@@ -1,22 +1,49 @@
 import axios from "axios";
 
 export const fetchCars = async () => {
-  const options = {
-    method: "GET",
-    url: "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars1",
-    params: { model: "corolla" },
-    headers: {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_CARS_NINJAS_RAPID_API_KEY || "",
-      "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
-    },
+  const headers: HeadersInit = {
+    "X-RapidAPI-Key": process.env.NEXT_PUBLIC_CARS_NINJAS_RAPID_API_KEY || "",
+    "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
   };
 
-  try {
-    const response = await axios.request(options);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await fetch(
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars2?model=corolla`,
+    {
+      headers: headers,
+    }
+  );
+
+  // Parse the response as JSON
+  const result = await response.json();
+  console.log("🚀 ~ fetchCars ~ result:", result);
+
+  return result;
+  // const options = {
+  //   method: "GET",
+  //   url: "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars1",
+  //   params: { model: "corolla" },
+  //   headers: {
+  //     "X-RapidAPI-Key": process.env.NEXT_PUBLIC_CARS_NINJAS_RAPID_API_KEY || "",
+  //     "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
+  //   },
+  // };
+  // try {
+  //   const response = await axios.get(
+  //     "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars1",
+  //     {
+  //       params: { model: "corolla" },
+  //       headers: {
+  //         "X-RapidAPI-Key":
+  //           process.env.NEXT_PUBLIC_CARS_NINJAS_RAPID_API_KEY || "",
+  //         "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
+  //       },
+  //     }
+  //   );
+  //   console.log("🚀 ~ fetchCars ~ response.data:", response.data);
+  //   return response.data;
+  // } catch (error) {
+  //   console.error(error);
+  // }
 };
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
