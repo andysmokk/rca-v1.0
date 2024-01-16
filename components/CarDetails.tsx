@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 
 import { CarProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -67,7 +68,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     bg-center rounded-lg"
                     >
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car, "angle")}
                         alt="car"
                         fill
                         priority
@@ -81,7 +82,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                        bg-primary-blue-100 rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "29")}
                           alt="car"
                           fill
                           priority
@@ -93,7 +94,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                        bg-primary-blue-100 rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "33")}
                           alt="car"
                           fill
                           priority
@@ -105,7 +106,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                        bg-primary-blue-100 rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "13")}
                           alt="car"
                           fill
                           priority
