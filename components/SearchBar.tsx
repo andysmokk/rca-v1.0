@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import { SearchManufacturer } from "./";
 
@@ -63,7 +63,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form className="searchbar" onClick={handleSearch}>
+    <form className="searchbar" onSubmit={handleSearch}>
       <div className="searchbar__item">
         <SearchManufacturer
           manufacturer={manufacturer}
