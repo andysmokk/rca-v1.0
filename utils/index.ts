@@ -17,7 +17,7 @@ export const fetchCars = async () => {
 
   // Parse the response as JSON
   const result = await response.json();
-  console.log("🚀 ~ fetchCars ~ result:", result);
+  // console.log("🚀 ~ fetchCars ~ result:", result);
 
   return result;
   // const options = {
