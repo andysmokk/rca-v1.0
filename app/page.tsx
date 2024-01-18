@@ -6,7 +6,6 @@ import { fetchCars } from "@/utils";
 
 export default async function Home() {
   const allCars = await fetchCars();
-  console.log("🚀 ~ Home ~ allCars:", allCars);
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
