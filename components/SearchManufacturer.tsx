@@ -51,7 +51,13 @@ const SearchManufacturer = ({
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options>
+            <Combobox.Options
+              //   className="absolute mt-1 max-h-60 w-full overflow-auto
+              // rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black
+              // ring-opacity-5 focus:outline-none sm:text-sm z-20"
+              className="absolute z-20 w-full sm:text-sm bg-white max-h-60 overflow-auto text-base shadow-lg rounded-[25px] mt-1"
+              static
+            >
               {filteredManufacturer.length === 0 && query !== "" ? (
                 <div
                   className="relative cursor-default select-none px-4 py-2
@@ -73,7 +79,7 @@ const SearchManufacturer = ({
                     {({ selected, active }) => (
                       <>
                         <span
-                          className={`block truncate ${
+                          className={`block truncate cursor-pointer ${
                             selected ? "font-medium" : "font-normal"
                           }`}
                         >

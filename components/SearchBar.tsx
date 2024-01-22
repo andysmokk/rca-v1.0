@@ -73,7 +73,7 @@ const SearchBar = () => {
         <SearchButton otherClasses="sm:hidden" />
       </div>
 
-      <div className="searchbar__item">
+      <div className="searchbar__item ">
         <Image
           src="/model-icon.png"
           alt="car model"
