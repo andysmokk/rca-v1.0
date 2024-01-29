@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link
                   key={item.title}
                   href={item.url}
-                  className="text-gray-500"
+                  className="text-gray-500 hover:text-blue-700 hover:underline"
                 >
                   {item.title}
                 </Link>
@@ -46,15 +46,23 @@ const Footer = () => {
       </div>
 
       <div
-        className="flex justify-between items-center flex-wrap mt-10 border-t
-      border-gray-100 sm:px-16 px-6 py-10"
+        className="justify-between items-center flex-wrap mt-10 border-t
+      border-gray-100 sm:px-16 sm:flex px-6 py-10"
       >
-        <p>@2024 RentCar. All rights reserved</p>
+        <p className="flex justify-center">
+          @2024 RentCar. All rights reserved
+        </p>
         <div className="footer__copyrights-link">
-          <Link href="/" className="text-gray-500">
+          <Link
+            href="/"
+            className="text-gray-500 hover:text-blue-700 hover:underline mt-5 sm:mt-0"
+          >
             Privacy Policy
           </Link>
-          <Link href="/" className="text-gray-500">
+          <Link
+            href="/"
+            className="text-gray-500 hover:text-blue-700 hover:underline mt-5 sm:mt-0"
+          >
             Terms of Use
           </Link>
         </div>
