@@ -226,3 +226,6 @@
 }
 
 /* END: search manufacturer styles */
+.btn-hover-focus {
+  @apply hover:ring hover:bg-white hover:ring-blue-600 hover:text-blue-600 hover:font-semibold active:bg-blue-300 focus:outline-none focus:ring focus:ring-blue-600 focus:text-blue-600 focus:bg-white focus:font-semibold
+}
