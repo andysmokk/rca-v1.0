@@ -3,12 +3,9 @@
 import Image from "next/image";
 
 import { CustomButton } from "@/components";
-// import { fetchCars } from "@/utils";
 
 const Hero = () => {
   const handleScroll = () => {};
-
-  // fetchCars();
 
   return (
     <div className="hero">

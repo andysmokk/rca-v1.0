@@ -35,7 +35,8 @@ const Footer = () => {
                 <Link
                   key={item.title}
                   href={item.url}
-                  className="text-gray-500 hover:text-blue-700 hover:underline focus:text-blue-700 focus:underline"
+                  className="text-gray-500 hover:text-blue-700 
+                  hover:underline focus:text-blue-700 focus:underline"
                 >
                   {item.title}
                 </Link>
@@ -55,13 +56,15 @@ const Footer = () => {
         <div className="footer__copyrights-link">
           <Link
             href="/"
-            className="text-gray-500 hover:text-blue-700 hover:underline focus:text-blue-700 focus:underline mt-5 sm:mt-0"
+            className="text-gray-500 hover:text-blue-700 hover:underline 
+            focus:text-blue-700 focus:underline mt-5 sm:mt-0"
           >
             Privacy Policy
           </Link>
           <Link
             href="/"
-            className="text-gray-500 hover:text-blue-700 hover:underline focus:text-blue-700 focus:underline mt-5 sm:mt-0"
+            className="text-gray-500 hover:text-blue-700 hover:underline 
+            focus:text-blue-700 focus:underline mt-5 sm:mt-0"
           >
             Terms of Use
           </Link>

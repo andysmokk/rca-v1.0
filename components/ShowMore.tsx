@@ -3,8 +3,8 @@
 import { useRouter } from "next/navigation";
 
 import { ShowMoreProps } from "@/types";
-import { CustomButton } from ".";
 import { updateSearchParams } from "@/utils";
+import { CustomButton } from ".";
 
 const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
   const router = useRouter();

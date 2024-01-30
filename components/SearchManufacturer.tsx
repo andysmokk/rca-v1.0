@@ -52,10 +52,8 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options
-              //   className="absolute mt-1 max-h-60 w-full overflow-auto
-              // rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black
-              // ring-opacity-5 focus:outline-none sm:text-sm z-20"
-              className="absolute z-20 w-full sm:text-sm bg-white max-h-60 overflow-auto text-base shadow-lg rounded-[25px] mt-1"
+              className="absolute z-20 w-full sm:text-sm bg-white max-h-60 
+              overflow-auto text-base shadow-lg rounded-[25px] mt-1"
               static
             >
               {filteredManufacturer.length === 0 && query !== "" ? (
@@ -87,7 +85,8 @@ const SearchManufacturer = ({
                         </span>
                         {selected ? (
                           <span
-                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                            className={`absolute inset-y-0 left-0 flex 
+                            items-center pl-3 ${
                               active ? "text-white" : "text-teal-600"
                             }`}
                           ></span>

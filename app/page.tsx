@@ -1,6 +1,3 @@
-// import Image from "next/image";
-// import { v4 as uuidv4 } from "uuid";
-
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
 import { HomeProps } from "@/types";
