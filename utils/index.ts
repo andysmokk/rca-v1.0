@@ -16,7 +16,6 @@ export const fetchCars = async (filters: FilterProps) => {
   );
 
   const result = await response.json();
-  console.log("🚀 ~ fetchCars ~ result:", result);
 
   return result;
 };
