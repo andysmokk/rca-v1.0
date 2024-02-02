@@ -14,6 +14,11 @@ interface CarDetailsProps {
 }
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
+  const typeTransmission: Record<string, string> = {
+    a: "Automatic",
+    m: "Manual",
+  };
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -136,7 +141,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                             {key.split("_").join(" ")}
                           </h4>
                           <p className="text-black-100 font-semibold">
-                            {value}
+                            {typeTransmission[value] || value}
                           </p>
                         </div>
                       ))}
